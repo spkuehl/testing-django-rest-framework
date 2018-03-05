@@ -37,3 +37,6 @@ class Snippet(models.Model):
             style=self.style, linenos=linenos, full=True, **options)
         self.highlighted = highlight(self.code, lexer, formatter)
         super(Snippet, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
