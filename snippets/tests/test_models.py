@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class SnippetTest(TestCase):
-    """ Test module for Puppy model """
+    """ Test module for Snippet model """
 
     def setUp(self):
         self.user = User.objects.create_user(
@@ -21,7 +21,6 @@ class SnippetTest(TestCase):
             owner=self.user,
             highlighted='test highlighted field'
             )
-
 
     def test_string_representation(self):
         snip = Snippet.objects.get(id=1)
